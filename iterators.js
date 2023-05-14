@@ -20,11 +20,7 @@ logger(["test", "test2", "test3"]);
  *   C = (F - 32) * (5/9)
  ************************************/
 const toCelsius = function(temperatures) {
-    let tempsArray = [];
-        tempsArray = temperatures.map((temps) => {
-        return ((temps - 32) * (5/9));
-    }) 
-    return tempsArray;
+    return temperatures.map((temps) =>  ((temps - 32) * (5/9))); 
 };
 console.log(toCelsius([0, 45, 65]));
 
@@ -45,15 +41,11 @@ const hottestDays = function(temperatures, threshhold) {
     //     if (item > threshhold) {
     //         return item;
      
-    const result = temperatures.filter(item => item > threshhold)        
+    return temperatures.filter(item => item > threshhold)        
             
         // } else {
         //     return tempsThresArray;
         // }
-
-
-    return result;
-
 }
 console.log(hottestDays([40, 60, 25, 70], 30));
 /******************************************
